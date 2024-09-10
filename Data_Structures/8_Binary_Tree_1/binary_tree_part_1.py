@@ -6,7 +6,7 @@ class BinarySearchTreeNode:
 
     def add_child(self, data):
         if data == self.data:
-            return # node already exist
+            return
 
         if data < self.data:
             if self.left:
@@ -18,7 +18,6 @@ class BinarySearchTreeNode:
                 self.right.add_child(data)
             else:
                 self.right = BinarySearchTreeNode(data)
-
 
     def search(self, val):
         if self.data == val:
@@ -50,20 +49,21 @@ class BinarySearchTreeNode:
 
 
 def build_tree(elements):
-    print("Building tree with these elements:",elements)
+    print("Building tree with these elements: ", elements)
     root = BinarySearchTreeNode(elements[0])
 
-    for i in range(1,len(elements)):
+    for i in range(1, len(elements)):
         root.add_child(elements[i])
 
     return root
 
-if __name__ == '__main__':
-    countries = ["India","Pakistan","Germany", "USA","China","India","UK","USA"]
-    country_tree = build_tree(countries)
 
-    print("UK is in the list? ", country_tree.search("UK"))
-    print("Sweden is in the list? ", country_tree.search("Sweden"))
+if __name__ == "__main__":
+    countries = ["India", "Pakistan", "Germany", "USA", "China", "VietNam", "UK", "ThaiLand"]
+    countries_tree = build_tree(countries)
 
-    numbers_tree = build_tree([17, 4, 1, 20, 9, 23, 18, 34])
-    print("In order traversal gives this sorted list:",numbers_tree.in_order_traversal())
+    print("VietNam is in the list ?", countries_tree.search("VietNam"))
+    print("ThaiLand is in the list ?", countries_tree.search("ThaiLan"))
+
+    numbers_tree = build_tree([17, 4, 1, 20, 9, 23, 18, 44])
+    print("In order traversal gives this sorted list: ", numbers_tree.in_order_traversal())
