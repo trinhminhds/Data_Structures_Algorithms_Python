@@ -14,7 +14,7 @@ class TreeNode:
         return level
 
     def print_tree(self):
-        spaces = ' ' * self.get_level() * 3
+        spaces = " " * self.get_level() * 3
         prefix = spaces + "|__" if self.parent else ""
         print(prefix + self.data)
         if self.children:
@@ -43,6 +43,10 @@ def build_product_tree():
     tv.add_child(TreeNode("Samsung"))
     tv.add_child(TreeNode("LG"))
 
+    pc = TreeNode("PC")
+    pc.add_child(TreeNode("PC1"))
+    pc.add_child(TreeNode("PC2"))
+
     root.add_child(laptop)
     root.add_child(cellphone)
     root.add_child(tv)
@@ -50,5 +54,5 @@ def build_product_tree():
     root.print_tree()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     build_product_tree()
