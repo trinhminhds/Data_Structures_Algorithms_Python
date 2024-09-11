@@ -27,6 +27,7 @@ class TreeNode:
         child.parent = self
         self.children.append(child)
 
+
 def build_location_tree():
     root = TreeNode("Global")
 
@@ -37,7 +38,7 @@ def build_location_tree():
     gujarat.add_child(TreeNode("Baroda"))
 
     karnataka = TreeNode("Karnataka")
-    karnataka.add_child(TreeNode("Bangluru"))
+    karnataka.add_child(TreeNode("Bengaluru"))
     karnataka.add_child(TreeNode("Mysore"))
 
     india.add_child(gujarat)
@@ -66,5 +67,3 @@ def build_location_tree():
 if __name__ == '__main__':
     root_node = build_location_tree()
     root_node.print_tree(3)
-
-
