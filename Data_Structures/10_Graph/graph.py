@@ -7,9 +7,9 @@ class Graph:
                 self.graph_dict[start].append(end)
             else:
                 self.graph_dict[start] = [end]
-        print("Graph Dict:", self.graph_dict)
+        print('Graph Dict: ', self.graph_dict)
 
-    def get_paths(self, start, end, path=[]):
+    def get_paths(self, start, end, path = []):
         path = path + [start]
 
         if start == end:
@@ -27,7 +27,7 @@ class Graph:
 
         return paths
 
-    def get_shortest_path(self, start, end, path=[]):
+    def get_shortest_path(self, start, end, path = []):
         path = path + [start]
 
         if start == end:
@@ -49,18 +49,6 @@ class Graph:
 
 if __name__ == '__main__':
     routes = [
-        ("Mumbai", "Pune"),
-        ("Mumbai", "Surat"),
-        ("Surat", "Bangaluru"),
-        ("Pune", "Hyderabad"),
-        ("Pune", "Mysuru"),
-        ("Hyderabad", "Bangaluru"),
-        ("Hyderabad", "Chennai"),
-        ("Mysuru", "Bangaluru"),
-        ("Chennai", "Bangaluru")
-    ]
-
-    routes = [
         ("Mumbai", "Paris"),
         ("Mumbai", "Dubai"),
         ("Paris", "Dubai"),
@@ -74,7 +62,7 @@ if __name__ == '__main__':
     start = "Mumbai"
     end = "New York"
 
-    print(f"All paths between: {start} and {end}: ", route_graph.get_paths(start, end))
+    print(f'All paths between: {start} end {end}: ', route_graph.get_paths(start, end))
     print(f"Shortest path between {start} and {end}: ", route_graph.get_shortest_path(start, end))
 
     start = "Dubai"

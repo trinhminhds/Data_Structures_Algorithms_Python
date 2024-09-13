@@ -1,4 +1,3 @@
-# you can use this to sort strings too
 def bubble_sort(elements):
     size = len(elements)
 
@@ -16,9 +15,9 @@ def bubble_sort(elements):
 
 
 if __name__ == '__main__':
-    elements1 = [5, 9, 2, 1, 67, 34, 88, 34]
-    elements2 = [1, 2, 3, 4, 2]
-    elements3 = ["mona", "upheaval", "aamir", "tina", "chang"]
+    element1 = [5, 9, 2, 1, 67, 34, 88, 34]
+    element2 = [1, 2, 3, 4, 2]
+    element3 = ['mona', 'dhaval', 'aamir', 'tina', 'chang']
 
-    bubble_sort(elements1)
-    print(elements1)
+    bubble_sort(element1)
+    print(element1)

@@ -1,4 +1,3 @@
-# you can use this to sort strings too
 def bubble_sort(elements, key = None):
     size = len(elements)
 
@@ -19,11 +18,11 @@ def bubble_sort(elements, key = None):
 
 if __name__ == '__main__':
     elements_name = [
-        {'name': 'minh', 'transaction_amount': 1000, 'device': 'iphone-10'},
-        {'name': 'yen', 'transaction_amount': 400, 'device': 'google pixel'},
-        {'name': 'y', 'transaction_amount': 200, 'device': 'vi vo'},
-        {'name': 'tien', 'transaction_amount': 800, 'device': 'iphone-8'},
+        {'name': 'mona', 'transaction_amount': 1000, 'device': 'iphone-10'},
+        {'name': 'dhaval', 'transaction_amount': 400, 'device': 'google pixel'},
+        {'name': 'kathy', 'transaction_amount': 200, 'device': 'vi vo'},
+        {'name': 'aamir', 'transaction_amount': 800, 'device': 'iphone-8'},
     ]
 
-    bubble_sort(elements_name, key = 'transaction_amount')
+    bubble_sort(elements_name, 'transaction_amount')
     print(elements_name)
