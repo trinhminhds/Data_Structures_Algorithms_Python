@@ -12,3 +12,16 @@ if __name__ == "__main__":
     element_list = [1, 3, 45, 3, 6, 8, 5, 8, 95, 1]
     insertion_sort(element_list)
     print(element_list)
+
+tests = [
+    [11, 9, 29, 7, 2, 15, 28],
+    [3, 7, 9, 11],
+    [25, 22, 21, 10],
+    [29, 15, 28],
+    [],
+    [6]
+]
+
+for i in tests:
+    insertion_sort(i)
+    print(f'sorted array: {i}')
